@@ -1,0 +1,21 @@
+# Referensi snippet untuk AndroidManifest.xml
+# File ini BUKAN AndroidManifest.xml aktif. Setelah menjalankan
+# `flutter create . --project-name routine --org com.routine`,
+# salin isi <uses-permission> di bawah ini ke:
+# android/app/src/main/AndroidManifest.xml (dalam tag <manifest>)
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS"/>
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+
+    <application
+        android:label="ROUTINE"
+        android:name="${applicationName}"
+        android:icon="@mipmap/ic_launcher">
+        <!-- activity default dari flutter create akan ada di sini -->
+    </application>
+</manifest>
